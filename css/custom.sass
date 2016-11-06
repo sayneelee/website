@@ -27,6 +27,11 @@ address
    font-style: normal
 
 // -----------------------------------------------------------------------------
+// Variables
+
+$font-roboto: Roboto, Arial, Helvetica, sans-serif;
+
+// -----------------------------------------------------------------------------
 // Mixins
 
 .table
@@ -34,6 +39,12 @@ address
 
 .cell
    display: cell
+
+.copy
+   font-family: $font-roboto
+   font-size:   1em
+   line-height: 2.3ex
+   color:       rgba(0, 0, 0, 0.8)
 
 /* ---- COMPONENTS ---------------------------------------------------------- */
 
@@ -47,7 +58,7 @@ address
    border-radius: .2em
    padding:       0.6em 0.8em
    background:    #008cff
-   font-family:   helvetica, roboto, sans-serif
+   font-family:   $font-roboto
 
    &:hover
       background: #008cfa
@@ -56,24 +67,24 @@ address
 /* ---- Menu ----------------------- */
 
 #TopMenuContainer
-   display:          block
-   height:           60px
-   padding-top:      .5em
-   padding-right:    3px
-   padding-left:     3px
-   box-sizing:       border-box
-   box-shadow:       0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23)
-   background:       #ECEFF1
+   display:       block
+   height:        60px
+   padding-top:   .5em
+   padding-right: 3px
+   padding-left:  3px
+   box-sizing:    border-box
+   box-shadow:    0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23)
+   background:    #ECEFF1
    .nav
-      display:          flex
-      justify-content:  space-between
-      font-family:      Roboto, Arial, Helvetica, sans-serif
-      font-size:        80%
-      max-width:        85%
-      margin-left:      5%
-      margin-right:     5%
-      border-radius:    2px
-      box-shadow:       0 0px 0px rgba(0,0,0,0.19), 0 0px 0px rgba(0,0,0,0.23)
+      display:         flex
+      justify-content: space-between
+      font-family:     $font-roboto
+      font-size:       1em
+      max-width:       85%
+      margin-left:     5%
+      margin-right:    5%
+      border-radius:   2px
+      box-shadow:      0 0px 0px rgba(0,0,0,0.19), 0 0px 0px rgba(0,0,0,0.23)
 
       .left-logo
          display:       flex
