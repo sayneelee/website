@@ -1,5 +1,23 @@
+// -----------------------------------------------------------------------------
+// Variables
+
+$font-roboto: Roboto, Arial, Helvetica, sans-serif;
+
+$red: red;
+
+// -----------------------------------------------------------------------------
+// Mixins
+
+.copy
+   font-family: $font-roboto
+   font-size:   1em
+   line-height: 2.3ex
+   color:       rgba(0, 0, 0, 0.8)
 
 /* ---- GLOBAL -------------------------------------------------------------- */
+
+// ----------------------------------------------
+// Reset
 
 html
    box-sizing: border-box
@@ -18,33 +36,18 @@ table, thead, tbody,
    padding: 0
 
 body
-   margin:     .5em auto
-   background: #e2e1e0
-   text-align: center
-
+   background-size: 100%
 
 address
    font-style: normal
 
+// ----------------------------------------------
+// Custom
+
+
+
 // -----------------------------------------------------------------------------
-// Variables
-
-$font-roboto: Roboto, Arial, Helvetica, sans-serif;
-
-// -----------------------------------------------------------------------------
-// Mixins
-
-.table
-   display: table
-
-.cell
-   display: cell
-
-.copy
-   font-family: $font-roboto
-   font-size:   1em
-   line-height: 2.3ex
-   color:       rgba(0, 0, 0, 0.8)
+//
 
 /* ---- COMPONENTS ---------------------------------------------------------- */
 
@@ -72,9 +75,9 @@ $font-roboto: Roboto, Arial, Helvetica, sans-serif;
    padding-top:   .5em
    padding-right: 3px
    padding-left:  3px
-   box-sizing:    border-box
    box-shadow:    0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23)
    background:    #ECEFF1
+
    .nav
       display:         flex
       justify-content: space-between
@@ -110,6 +113,9 @@ $font-roboto: Roboto, Arial, Helvetica, sans-serif;
                color:         black
                text-size:     16px
 
+         .active
+            border-bottom: 1px solid darken(red, 20%)
+
       .right-menu
          display:          flex
          flex-direction:   row
@@ -124,46 +130,31 @@ $font-roboto: Roboto, Arial, Helvetica, sans-serif;
          padding:          0.3em
          margin-left:      1px
          color:            lighten(black, 20%)
+         border-bottom:    1px solid transparent
 
          &.inactive:hover
-            border-bottom-style: outset
-            border-bottom-width: thin
-            border-bottom-color: red
+            border-bottom: 1px solid darken(red, 20%)
 
-      .active
-         border-bottom-style: outset
-         border-bottom-width: 2px
-         border-bottom-color: red
 
 /* ---- Hero Image ----------------------- */
 
 /* ---- Footer --------------------------- */
 footer
-   display:    block
-   height:
+   display: flex
    background: #f6f6f6
-   address
-      ul
-         li
-            a
-               text-decoration:  none
-               color:            lighten(blue, 30%)
+   address ul li a
+      text-decoration:  none
+      color:            blue
+
+   .table
+      display: table
+
+      .row
+         display: table-row
+
+      .cell
+         display: table-cell
+         padding-right: 1em
+         text-align: right
 
 /* ---- Table ---------------------------- */
-
-#Table
-   box-shadow: 0 .1em .3em 0
-   color: #373737
-
-   thead
-      vertical-align: middle
-      font-family:    Roboto, Arial, Helvetica, sans-serif
-      color:          #373737
-
-      tr
-         background: #F5F5F5
-
-   tbody
-      tr
-         &:hover
-            background: #F5F5F5

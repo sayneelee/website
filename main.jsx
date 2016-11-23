@@ -52,9 +52,6 @@ const HeroImage = function() {
          <div id="-container">
             <button href="#">Request a Appointment</button>
             <img src=""/>
-            <div id="hilink-container">
-                <a href="#">Request a Appointment</a>
-            </div>
          </div>
       </section>
    )
@@ -73,15 +70,26 @@ const Footer = function() {
                <li>(408) 481-0477</li>
             </ul>
          </address>
-         <div id="hourslist-container">
-            <div>
-               <ul>
-                  <li>M 9-5 PM</li>
-                  <li>T 9-5 PM</li>
-                  <li>W 9-5 PM</li>
-                  <li>Th 9-5 PM</li>
-                  <li>F 9-5 PM</li>
-               </ul>
+         <div className="table">
+            <div className="row">
+               <time className="cell">Monday</time>
+               <time className="cell">9-5 pm</time>
+            </div>
+            <div className="row">
+               <time className="cell">Tuesday</time>
+               <time className="cell">9-5 pm</time>
+            </div>
+            <div className="row">
+               <time className="cell">Wednesday</time>
+               <time className="cell">9-5 pm</time>
+            </div>
+            <div className="row">
+               <time className="cell">Thursday</time>
+               <time className="cell">9-5 pm</time>
+            </div>
+            <div className="row">
+               <time className="cell">Friday</time>
+               <time className="cell">9-5 pm</time>
             </div>
          </div>
       </footer>
