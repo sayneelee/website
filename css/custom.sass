@@ -44,6 +44,7 @@ address
 // ----------------------------------------------
 // Custom
 
+body
 
 
 // -----------------------------------------------------------------------------
@@ -70,13 +71,14 @@ address
 /* ---- Menu ----------------------- */
 
 #TopMenuContainer
-   display:       block
-   height:        60px
-   padding-top:   .5em
-   padding-right: 3px
-   padding-left:  3px
-   box-shadow:    0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23)
-   background:    #ECEFF1
+   display:          block
+   vertical-align:   top
+   height:           60px
+   padding-top:      .5em
+   padding-right:    3px
+   padding-left:     3px
+   box-shadow:       0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23)
+   background:       #ECEFF1
 
    .nav
       display:         flex
@@ -140,11 +142,14 @@ address
 
 /* ---- Footer --------------------------- */
 footer
-   display: flex
-   background: #f6f6f6
+   display:          flex
+   vertical-align:   baseline
+   justify-content:  space-around
+   background:       #f6f6f6
    address ul li a
       text-decoration:  none
       color:            blue
+      padding-top:      1em
 
    .table
       display: table

@@ -46,10 +46,10 @@ const TopMenu = function({ active }) {
    )
 }
 
-const HeroImage = function() {
+const RequestButton = function() {
    return (
-      <section id="HeroContainer">
-         <div id="-container">
+      <section id="button-container">
+         <div id="">
             <button href="#">Request a Appointment</button>
             <img src=""/>
          </div>
@@ -103,8 +103,8 @@ function RootView() {
    return (
       <main>
          <TopMenu active="home" />
-         <HeroImage/>
-         <Footer/>
+         <RequestButton />
+         <Footer />
       </main>
    )
 }
