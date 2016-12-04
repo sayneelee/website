@@ -1,5 +1,6 @@
-import React           from 'react'
-import ReactDOM        from 'react-dom'
+import React                         from 'react'
+import ReactDOM                      from 'react-dom'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import './css/custom.sass'
 
 // -----------------------------------------------------------------------------
@@ -46,12 +47,11 @@ const TopMenu = function({ active }) {
    )
 }
 
-const RequestButton = function() {
+const Content = function() {
    return (
-      <section id="button-container">
-         <div id="">
+      <section id="Content-Container">
+         <div id="button-container">
             <button href="#">Request a Appointment</button>
-            <img src=""/>
          </div>
       </section>
    )
@@ -64,34 +64,13 @@ const Footer = function() {
             <ul>
                <li>Howard Y. Lee, CPA</li>
                <li>1208 E Arques Avenue, Suite 111</li>
-               <li>Sunnyvale, CA 95051 <a className="fa fa-map-marker"
-               aria-hidden="true" href="https://goo.gl/maps/mjnFnPJjQir">
-               </a></li>
+               <li>
+                  Sunnyvale, CA 95051
+                  <a className="fa fa-map-marker" href="https://goo.gl/maps/mjnFnPJjQir"></a>
+               </li>
                <li>(408) 481-0477</li>
             </ul>
          </address>
-         <div className="table">
-            <div className="row">
-               <time className="cell">Monday</time>
-               <time className="cell">9-5 pm</time>
-            </div>
-            <div className="row">
-               <time className="cell">Tuesday</time>
-               <time className="cell">9-5 pm</time>
-            </div>
-            <div className="row">
-               <time className="cell">Wednesday</time>
-               <time className="cell">9-5 pm</time>
-            </div>
-            <div className="row">
-               <time className="cell">Thursday</time>
-               <time className="cell">9-5 pm</time>
-            </div>
-            <div className="row">
-               <time className="cell">Friday</time>
-               <time className="cell">9-5 pm</time>
-            </div>
-         </div>
       </footer>
    )
 }
@@ -103,7 +82,7 @@ function RootView() {
    return (
       <main>
          <TopMenu active="home" />
-         <RequestButton />
+         <Content />
          <Footer />
       </main>
    )
@@ -113,6 +92,10 @@ function RootView() {
 // Render
 
 ReactDOM.render(
-   <RootView />,
+   (
+      <Router>
+         <Route path="/" component={App} />
+      </Router>
+   ),
    document.getElementById('app')
 )
