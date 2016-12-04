@@ -61,15 +61,10 @@ const Footer = function() {
    return (
       <footer>
          <address>
-            <ul>
-               <li>Howard Y. Lee, CPA</li>
-               <li>1208 E Arques Avenue, Suite 111</li>
-               <li>
-                  Sunnyvale, CA 95051
-                  <a className="fa fa-map-marker" href="https://goo.gl/maps/mjnFnPJjQir"></a>
-               </li>
-               <li>(408) 481-0477</li>
-            </ul>
+            Howard Y. Lee, CPA<br />
+            1208 E Arques Avenue, Suite 111<br />
+            Sunnyvale, CA 95051 <a className="fa fa-map-marker" href="https://goo.gl/maps/mjnFnPJjQir"></a><br />
+            (408) 481-0477
          </address>
       </footer>
    )
@@ -87,6 +82,24 @@ function RootView() {
       </main>
    )
 }
+
+// function ServicesView() {
+//    return (
+
+//    )
+// }
+
+// function TaxPreparationView() {
+//    return (
+
+//    )
+// }
+
+// function AboutView() {
+//    return (
+
+//    )
+// }
 
 // -----------------------------------------------------------------------------
 // Render
